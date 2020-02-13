@@ -59,4 +59,21 @@ public class TestAction {
         log.info("same2");
         return "name: "+name+";id: "+id;
     }
+
+
+    /**
+     * 异常方法
+     * @return
+     */
+    @GetMapping("/exception")
+    public String exception(){
+        try {
+            log.info("start...");
+            System.out.println(1/0);
+            log.info("end...");
+        }catch (Exception e){
+
+        }
+        return "success";
+    }
 }
