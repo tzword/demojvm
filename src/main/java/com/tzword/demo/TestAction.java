@@ -76,4 +76,16 @@ public class TestAction {
         }
         return "success";
     }
+
+
+    /**
+     * 复杂对象
+     * @param user
+     * @return
+     */
+    @GetMapping("/getComplex")
+    public User getComplex(User user){
+        log.info("获取复杂对象");
+        return user;
+    }
 }
